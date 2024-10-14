@@ -10,6 +10,19 @@ use OwenIt\Auditing\Contracts\Auditable;
 use OwenIt\Auditing\Tests\Casts\Money;
 use OwenIt\Auditing\Tests\Database\Factories\ArticleFactory;
 
+/**
+ * @property int $id
+ * @property string $title
+ * @property string $content
+ * @property bool $reviewed
+ * @property null|\Carbon\Carbon $published_at
+ * @property null|json $config
+ * @property null|Money $price
+ * @property null|json $images
+ * @property null|\Carbon\Carbon $created_at
+ * @property null|\Carbon\Carbon $updated_at
+ * @property null|\Carbon\Carbon $deleted_at 
+ */
 class Article extends Model implements Auditable
 {
     use \OwenIt\Auditing\Auditable;

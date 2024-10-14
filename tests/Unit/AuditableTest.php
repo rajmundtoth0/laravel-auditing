@@ -754,10 +754,14 @@ class AuditableTest extends AuditingTestCase
     {
         $model = new Article();
 
+        assert(property_exists($model, 'auditInclude'));
+        
         $model->auditInclude = [
             'title',
             'content',
         ];
+        
+        assert(method_exists($model, 'getAuditInclude'));
 
         self::assertSame([
             'title',
@@ -829,6 +833,7 @@ class AuditableTest extends AuditingTestCase
     public function itReturnsTheCustomAuditStrictValueFromAttribute()
     {
         $model = new Article();
+        assert(property_exists($model, 'auditStrict'));
 
         $model->auditStrict = true;
 

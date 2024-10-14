@@ -8,6 +8,14 @@ use OwenIt\Auditing\Contracts\Auditable;
 use OwenIt\Auditing\Tests\Database\Factories\ApiModelFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * @property string $api_model_id
+ * @property string $content
+ * @property null|\Carbon\Carbon $published_at
+ * @property null|\Carbon\Carbon $created_at
+ * @property null|\Carbon\Carbon $updated_at
+ * @property null|\Carbon\Carbon $deleted_at
+ */
 class ApiModel extends Model implements Auditable
 {
     use \OwenIt\Auditing\Auditable;

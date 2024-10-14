@@ -12,7 +12,14 @@ use OwenIt\Auditing\Database\Factories\AuditFactory;
  * @property array $new_values
  * @property array $old_values
  * @property mixed $user
- * @property mixed $auditable.
+ * @property mixed $auditable
+ * @property mixed $user_id
+ * @property mixed $auditable_id
+ * @property string $url
+ * @property string $ip_address
+ * @property string $user_agent
+ * @property null|Carbon\Carbon $created_at
+ * @property null|Carbon\Carbon $updated_at
  */
 class Audit extends Model implements \OwenIt\Auditing\Contracts\Audit
 {

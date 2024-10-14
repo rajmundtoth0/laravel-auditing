@@ -3,6 +3,7 @@
 namespace OwenIt\Auditing\Contracts;
 
 /**
+ * @property string $auditable_type
  * @mixin \OwenIt\Auditing\Models\Audit
  */
 interface Audit
